@@ -7,6 +7,6 @@ spec:
   interval: 2m
   sourceRef:
     kind: GitRepository
-    name: fleet-repo
+    name: flux-system
   path: ./infrastructure/loki/installation
   prune: true
