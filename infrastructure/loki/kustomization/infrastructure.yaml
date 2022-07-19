@@ -11,7 +11,7 @@ spec:
   path: ./infrastructure/loki/installation
   prune: true
   postBuild:
-    substitute:
+    substituteFrom:
       - kind: Secret
         name: grafanacloud
         optional: false
