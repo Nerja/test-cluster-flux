@@ -1,0 +1,24 @@
+apiVersion: flagger.app/v1beta1
+kind: Canary
+metadata:
+  name: example
+  namespace: example
+spec:
+  provider: istio
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: podinfo
+  service:
+    port: 80
+    targetPort: 9898
+    gateways:
+      - example
+    hosts:
+      - "api.example.marcusrodan.com"
+  analysis:
+    interval: 1m
+    threshold: 10
+    maxWeight: 100
+    stepWeight: 25
+    stepWeightPromotion: 25
