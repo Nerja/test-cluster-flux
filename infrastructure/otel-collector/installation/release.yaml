@@ -24,7 +24,7 @@ spec:
         otlphttp:
           endpoint: https://tempo-eu-west1.grafana.net
           headers:
-            Authorization: "Basic ${grafana_cloud_tempo_credentials}"
+            Authorization: Basic ${grafana_cloud_tempo_credentials}
       service:
         pipelines:
           traces:
