@@ -15,6 +15,7 @@ spec:
         name: otel-collector
         namespace: otel-collector
   values:
+    mode: deployment
     config:
       receivers:
         zipkin:
