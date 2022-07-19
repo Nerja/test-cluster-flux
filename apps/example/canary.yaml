@@ -15,7 +15,7 @@ spec:
     gateways:
       - example
     hosts:
-      - "api.example.marcusrodan.com"
+      - api.example.marcusrodan.com
   analysis:
     interval: 1m
     threshold: 10

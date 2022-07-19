@@ -11,3 +11,5 @@ spec:
       number: 80
       name: http
       protocol: HTTP
+    hosts:
+      - api.example.marcusrodan.com
