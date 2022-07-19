@@ -16,5 +16,8 @@ spec:
         namespace: loki
   values:
     config:
+      snippets:
+        pipelineStages:
+          - docker: {}
       clients:
         - url: ${url}
