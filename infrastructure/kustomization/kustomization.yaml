@@ -5,3 +5,4 @@ resources:
 - ../istio/kustomization
 - ../metrics-server/kustomization
 - ../flagger/kustomization
+- ../otel-collector/kustomization
