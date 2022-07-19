@@ -13,4 +13,4 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: metrics-server
-        namespace: istio-system
+        namespace: metrics-server
