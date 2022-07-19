@@ -14,3 +14,7 @@ spec:
         kind: HelmRepository
         name: grafana
         namespace: loki
+  values:
+    config:
+      clients:
+        - url: ${url}

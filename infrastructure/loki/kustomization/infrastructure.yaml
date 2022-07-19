@@ -10,3 +10,8 @@ spec:
     name: flux-system
   path: ./infrastructure/loki/installation
   prune: true
+  postBuild:
+    substitute:
+      - kind: Secret
+        name: grafanacloud
+        optional: false
