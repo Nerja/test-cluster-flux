@@ -30,6 +30,13 @@ spec:
         kind: HelmRepository
         name: istio
         namespace: istio-system
+  values:
+    pilot:
+      traceSampling: 100
+    global:
+      tracer:
+        zipkin:
+          address: otel-collector.otel-collector.svc:9411
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
