@@ -4,6 +4,4 @@ kind: Kustomization
 resources:
 - gotk-sync.yaml
 - gotk-components.yaml
-- ../infrastructure/loki/kustomization
-- ../infrastructure/istio/kustomization
-- ../infrastructure/metrics-server/kustomization
+- ../infrastructure/kustomization
