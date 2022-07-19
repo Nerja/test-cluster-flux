@@ -4,3 +4,4 @@ resources:
 - ../loki/kustomization
 - ../istio/kustomization
 - ../metrics-server/kustomization
+- ../flagger/kustomization
