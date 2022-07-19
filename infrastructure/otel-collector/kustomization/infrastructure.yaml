@@ -10,3 +10,8 @@ spec:
     name: flux-system
   path: ./infrastructure/otel-collector/installation
   prune: true
+  postBuild:
+    substituteFrom:
+      - kind: Secret
+        name: grafanacloud
+        optional: false

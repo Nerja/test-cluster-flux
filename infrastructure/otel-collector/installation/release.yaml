@@ -22,9 +22,9 @@ spec:
           endpoint: 0.0.0.0:9411
       exporters:
         otlphttp:
-          endpoint: tempo-eu-west1.grafana.net:443
+          endpoint: https://tempo-eu-west1.grafana.net
           headers:
-            Authorization: "Basic MjE1NzQ5OmV5SnJJam9pTXpFeVkyVmhOVGxrTVRNd056Um1ZalV5T0RkbE16aG1ObVUwTnpBMk1tTTVaR00yTWprMVppSXNJbTRpT2lKMFpXMXdieUlzSW1sa0lqbzJORGc1TmpGOQ=="
+            Authorization: "Basic ${grafana_cloud_tempo_credentials}"
       service:
         pipelines:
           traces:
