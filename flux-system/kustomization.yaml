@@ -6,3 +6,4 @@ resources:
 - gotk-components.yaml
 - ../infrastructure/loki/kustomization
 - ../infrastructure/istio/kustomization
+- ../infrastructure/metrics-server/kustomization
