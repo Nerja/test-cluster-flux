@@ -15,16 +15,17 @@ spec:
         name: otel-collector
         namespace: otel-collector
   values:
-    receivers:
-      zipkin:
-        endpoint: 0.0.0.0:9411
-    exporters:
-      otlphttp:
-        endpoint: tempo-eu-west1.grafana.net:443
-        headers:
-          Authorization: "Basic MjE1NzQ5OmV5SnJJam9pTXpFeVkyVmhOVGxrTVRNd056Um1ZalV5T0RkbE16aG1ObVUwTnpBMk1tTTVaR00yTWprMVppSXNJbTRpT2lKMFpXMXdieUlzSW1sa0lqbzJORGc1TmpGOQ=="
-    service:
-      pipelines:
-        traces:
-          receivers: [zipkin]
-          exporters: [otlphttp]
+    config:
+      receivers:
+        zipkin:
+          endpoint: 0.0.0.0:9411
+      exporters:
+        otlphttp:
+          endpoint: tempo-eu-west1.grafana.net:443
+          headers:
+            Authorization: "Basic MjE1NzQ5OmV5SnJJam9pTXpFeVkyVmhOVGxrTVRNd056Um1ZalV5T0RkbE16aG1ObVUwTnpBMk1tTTVaR00yTWprMVppSXNJbTRpT2lKMFpXMXdieUlzSW1sa0lqbzJORGc1TmpGOQ=="
+      service:
+        pipelines:
+          traces:
+            receivers: [zipkin]
+            exporters: [otlphttp]
