@@ -34,6 +34,7 @@ spec:
     pilot:
       traceSampling: 100
     global:
+      enableTracing: true
       tracer:
         zipkin:
           address: otel-collector.otel-collector.svc:9411
