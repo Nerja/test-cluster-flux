@@ -17,5 +17,5 @@ spec:
   values:
     installCRDs: true
     cainjector:
-      podAnnotations:
-        iam.amazonaws.com/role: arn:aws:iam::310924428330:role/cert-manager
+    podAnnotations:
+      iam.amazonaws.com/role: arn:aws:iam::310924428330:role/cert-manager

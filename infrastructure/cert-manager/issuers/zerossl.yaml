@@ -1,0 +1,22 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: zerossl
+spec:
+  acme:
+    server: https://acme.zerossl.com/v2/DV90
+    email: you@example.com
+    externalAccountBinding:
+      keyAlgorithm: HS256
+      keyID: HAbuqXQlzO12UM0w25M7jw
+      keySecretRef: 
+        name: zerossleab
+        key: secret
+    privateKeySecretRef:
+      name: zerossl
+    solvers:
+      - dns01:
+          cnameStrategy: Follow
+          route53:
+            region: eu-west-1
+            hostedZoneID: Z01789661K0APYVB39ZR5
