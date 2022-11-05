@@ -6,3 +6,4 @@ resources:
 - ../metrics-server/kustomization
 - ../flagger/kustomization
 - ../otel-collector/kustomization
+- ../cert-manager/kustomization
