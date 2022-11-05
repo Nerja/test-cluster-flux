@@ -1,0 +1,29 @@
+apiVersion: iam.aws.crossplane.io/v1beta1
+kind: Role
+metadata:
+  name: cert-manager
+spec:
+  providerConfigRef:
+    name: crossplane-provider-aws
+  forProvider:
+    permissionsBoundary: arn:aws:iam::310924428330:policy/cert-manager
+    assumeRolePolicyDocument: |-
+        {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": "sts:AssumeRoleWithWebIdentity",
+                    "Principal": {
+                        "Federated": "arn:aws:iam::310924428330:oidc-provider/oidc.eks.eu-west-1.amazonaws.com/id/CAD234B2FB553E129DDCD2FA1EEFD070"
+                    },
+                    "Condition": {
+                        "StringEquals": {
+                            "oidc.eks.eu-west-1.amazonaws.com/id/CAD234B2FB553E129DDCD2FA1EEFD070:aud": [
+                                "sts.amazonaws.com"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }

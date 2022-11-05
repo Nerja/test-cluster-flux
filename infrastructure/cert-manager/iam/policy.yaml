@@ -1,0 +1,29 @@
+---
+apiVersion: iam.aws.crossplane.io/v1beta1
+kind: Policy
+metadata:
+  name: cert-manager
+spec:
+  providerConfigRef:
+    name: crossplane-provider-aws
+  forProvider:
+    name: cert-manager
+    document: |-
+              {
+                "Version": "2012-10-17",
+                "Statement": [
+                  {
+                    "Sid": "Route53access",
+                    "Action": [
+                      "route53:ChangeResourceRecordSets",
+                      "route53:ChangeTagsForResource",
+                      "route53:GetHostedZone",
+                      "route53:ListHostedZones",
+                      "route53:ListTagsForResource",
+                      "route53:ListTagsForResources"
+                    ],
+                    "Effect": "Allow",
+                    "Resource": "*"
+                  }
+                ]
+              }
