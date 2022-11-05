@@ -10,7 +10,7 @@ spec:
       keyAlgorithm: HS256
       keyID: HAbuqXQlzO12UM0w25M7jw
       keySecretRef: 
-        name: zerossleab
+        name: zerossl-secret
         key: secret
     privateKeySecretRef:
       name: zerossl
