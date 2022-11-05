@@ -16,8 +16,7 @@ spec:
         namespace: cert-manager
   values:
     installCRDs: true
-    serviceAccount:
-      annotations:
-        eks.amazonaws.com/role-arn: arn:aws:iam::310924428330:role/cert-manager
+    podAnnotations:
+      eks.amazonaws.com/role-arn: arn:aws:iam::310924428330:role/cert-manager
     securityContext:
       fsGroup: 1001

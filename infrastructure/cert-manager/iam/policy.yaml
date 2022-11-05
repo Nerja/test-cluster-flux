@@ -20,7 +20,8 @@ spec:
                       "route53:GetHostedZone",
                       "route53:ListHostedZones",
                       "route53:ListTagsForResource",
-                      "route53:ListTagsForResources"
+                      "route53:ListTagsForResources".
+                      "route53:GetChange"
                     ],
                     "Effect": "Allow",
                     "Resource": "*"
