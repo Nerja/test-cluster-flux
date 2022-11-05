@@ -20,7 +20,7 @@ spec:
   interval: 10m
   sourceRef:
     kind: GitRepository
-    name: fleet-repo
+    name: flux-system
   path: ./infrastructure/crossplane/providers
   prune: true
   dependsOn:
@@ -39,7 +39,7 @@ spec:
   interval: 10m
   sourceRef:
     kind: GitRepository
-    name: fleet-repo
+    name: flux-system
   path: ./infrastructure/crossplane/providercredentials
   prune: true
   dependsOn:
