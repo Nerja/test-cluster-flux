@@ -12,6 +12,7 @@ spec:
   prune: true
   dependsOn:
     - name: crossplane-providerscredentials
+    - name: kubed
   healthChecks:
     - apiVersion: iam.aws.crossplane.io/v1beta1
       kind: Policy
