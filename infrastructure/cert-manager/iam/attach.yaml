@@ -6,7 +6,7 @@ spec:
   forProvider:
     policyArnRef:
       name: cert-manager
-    roleNameref:
+    roleNameRef:
       name: cert-manager
   providerConfigRef:
     name: crossplane-provider-aws
