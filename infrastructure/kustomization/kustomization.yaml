@@ -7,3 +7,4 @@ resources:
 - ../flagger/kustomization
 - ../otel-collector/kustomization
 - ../cert-manager/kustomization
+- ../crossplane/kustomization
