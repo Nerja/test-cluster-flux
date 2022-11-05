@@ -18,3 +18,5 @@ spec:
     installCRDs: true
     podAnnotations:
       iam.amazonaws.com/role: arn:aws:iam::310924428330:role/cert-manager
+    securityContext:
+      fsGroup: 1001
